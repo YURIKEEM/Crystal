@@ -1,0 +1,46 @@
+package book_Practice;
+
+public class studyalone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   
+		int value1 = Integer.parseInt("10");
+		double value2 = Double.parseDouble("3.14");
+		boolean value3 = Boolean.parseBoolean("true");
+		
+		System.out.println("value1: " + value1);
+		System.out.println("value2: " + value2);
+		System.out.println("value3: " + value3); 
+		
+		String strvalue1 = String.valueOf(10);
+		String strvalue2 = String.valueOf(3.14);
+		String strvalue3 = String.valueOf(true);
+		
+		System.out.println("strvalue1: " + strvalue1);
+		System.out.println("strvalue2: " + strvalue2);
+		System.out.println("strvalue3: " + strvalue3);
+				
+		
+		char c1 = 'a';
+		char c2 = (char) (c1 + 1);
+		System.out.println(c2);
+		
+		double var1 = 3.5;
+		double var2 = 2.7;
+		int result = (int) var1 + (int) var2;
+		
+		System.out.println(result);
+	
+		long var1 =2L;
+		float var2 = 1.8f;
+		double var3 = 2.5;
+		String var4 = "3.9";
+		int result = (int)var1 + (int)(var2+var3) + (int)(Double.parseDouble(var4));
+		
+		System.out.println(result);
+		
+		
+	}
+
+}

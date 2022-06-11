@@ -1,0 +1,36 @@
+package chapter10;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class ArrayList02 {
+
+	public static void main(String[] args) throws Exception{
+		List<Integer>list = new ArrayList<Integer>();
+		System.out.print("프로그램 시작");
+		char ch=' ';
+		while((char)System.in.read()=='Y'||(char)System.in.read()=='y') {
+			System.out.print("정수 입력 : ");
+			list.add(insertNumber());
+			System.out.println("계속 입력");
+
+		}
+		System.out.println(list);
+		int tmax=list.get(0);
+		Iterator<Integer> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			int value = iterator.next();
+			if(tmax<value) {
+				tmax=value;
+			}
+		}
+	}
+   public static int insertNumber() {
+	   Scanner sc = new Scanner(System.in);
+	   System.out.println("숫자 입력");
+	   
+   }
+}

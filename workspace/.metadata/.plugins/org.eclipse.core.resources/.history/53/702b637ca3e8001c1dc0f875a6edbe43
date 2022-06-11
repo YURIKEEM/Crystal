@@ -1,0 +1,11 @@
+package game;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Item i1 = new Item("나무검", 0, 0, 10, 0);
+		System.out.println(i1.intemInfo());
+
+	}
+
+}

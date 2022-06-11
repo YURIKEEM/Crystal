@@ -1,0 +1,16 @@
+/*
+ * String name = “Jack Snider always helps other people even though he is already busy to study his own”;
+   에서 공백이 몇개 있는지 세는 코드를 작성하시오
+ */
+package jackSnider;
+
+public class Exam04 {
+
+	public static void main(String[] args) {
+		//배열에 이름 넣기
+		String[] name = {"J","a","c","k",null,"S","n","i","d","e","r"};
+		//배열 중 null값을 세기??
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package chapter10;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayList2 {
+
+   public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+      ArrayList<Integer> intlist = new ArrayList<Integer>();
+      String str = "";
+      while (true) {
+         try {
+            System.out.println("정수를 입력하세요 : ");
+            str = sc.nextLine();
+            intlist.add(Integer.parseInt(str));
+         } catch (Exception e) {
+            if (str.equals("N") || str.equals("n")) {
+               System.out.println("종료.");
+               break;
+
+            } else
+               System.out.println("잘못된 값 입력.");
+         }
+
+      }
+   }
+}

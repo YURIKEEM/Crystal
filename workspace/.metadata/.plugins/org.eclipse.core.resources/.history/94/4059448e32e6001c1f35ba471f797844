@@ -1,0 +1,25 @@
+package chapter10;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ArrayList02 {
+
+	public static void main(String[] args) throws Exception{
+		List<Integer>list = new ArrayList<Integer>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("프로그램 진행?(y/n)");
+		char ch=(char)System.in.read();
+		while(ch!='N'||ch!='n') {
+			System.out.println("정수 입력 : ");
+			int num= sc.nextInt();
+			list.add(num);
+			ch=(char)System.in.read();
+		}
+		
+		
+
+	}
+
+}

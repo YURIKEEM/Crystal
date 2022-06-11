@@ -1,0 +1,35 @@
+package chapter10;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class ArrayList02 {
+
+	  Scanner sc = new Scanner(System.in);
+      ArrayList<Integer> list = new ArrayList<Integer>();
+
+      while (true) {
+         System.out.print("입력 >> ");
+         String a = sc.nextLine();
+
+         if (a.equals("n") || a.equals("N")) {
+            break;
+         } else {
+            //System.out.print("정수 입력: ");
+            list.add(Integer.valueOf(a));
+         }
+      }
+
+      int max = list.get(0);
+      for (int i = 1; i < list.size(); i++) {
+         if (list.get(i) > max) {
+            max = list.get(i);
+         }
+      }
+      System.out.println(max);
+
+   }
+

@@ -1,0 +1,18 @@
+package chapter10;
+
+import java.util.ArrayList;
+public class ArrayList01 {
+
+	public static void main(String[] args) {
+		ArrayList list = new ArrayList();
+	    Prod prod = new Prod("p101","삼성Tv 40인치",350000);
+		list.add("홍길동");
+		list.add(prod);
+		list.add(new Prod("p102","LG Caption Tv",400000));
+		
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+
+	}
+
+}

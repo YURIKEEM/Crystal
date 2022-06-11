@@ -1,0 +1,29 @@
+/*
+ * String words = “Jack sNIdEr alWaYS eaTs ChIKEns”;
+
+다음 문자열에서 대문자는 소문자로, 소문자는 대문자로 바꿔서 출력하시오.
+ */
+package jackSnider;
+
+public class Exam06 {
+    
+	public static void main(String[] args) {
+	 String words = "Jack sNIdEr alWaYS eaTs ChIKEns";
+	 int wordInt=0;
+	 char answer=' ';
+     for(int i=0; i<words.length();i++) {
+    	 wordInt= words.charAt(i)-'0';
+    	 if(wordInt>= 65 || wordInt<=90) {
+    		 wordInt+= 32;
+    		 answer=(char)wordInt;
+    	 } else if(wordInt>=97 || wordInt<=122) {
+        		 wordInt-= 32;
+        		 answer=(char)wordInt;
+    	 }
+    	 System.out.print(answer);
+     }
+	
+
+	}
+
+}

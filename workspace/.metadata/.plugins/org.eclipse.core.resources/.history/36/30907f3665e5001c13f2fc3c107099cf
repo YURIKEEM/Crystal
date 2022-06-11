@@ -1,0 +1,80 @@
+package just_Sleep;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Just_Sleep {
+	static Statement stmt = null;   
+	static  ResultSet rs = null; 
+	static  Connection conn=null;
+	static ResultSetMetaData rsmd=null;
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Scanner sc=new Scanner(System.in);
+		int num=0;
+		String str;
+		while(true)
+		{
+			try {
+				init();
+				
+				System.out.println("하고자 하는 작업을 고르시오(1. select)");
+				num=sc.nextInt();
+				if(num==1)
+				{
+					System.out.println("쿼리를 입력하시오");
+					str=sc.nextLine();
+					str=sc.nextLine();
+					select(str);
+				}
+				
+				
+			}
+			catch(ClassNotFoundException e)
+			{
+				System.out.println("드라이버 연동 실패");
+				e.printStackTrace();
+			}
+			catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	//데이터베이스 연결메소드
+	static void init() throws ClassNotFoundException, SQLException
+	{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		String db_url="jdbc:oracle:thin:@localhost:1521:xe";
+		//실행 쿼리
+		conn=DriverManager.getConnection(db_url,"ddit","java");
+		//실행할 쿼리 정보 등록
+		stmt = conn.createStatement();
+		//결과를 담을 ResultSet 생성 후 결과 담기
+	}
+	
+	//select 메소드
+	static void select(String str) throws SQLException
+	{
+		
+		rs = stmt.executeQuery(str);
+		rsmd=rs.getMetaData();
+		
+		int rowCnt = rsmd.getColumnCount();
+			while(rs.next())
+			{
+				for(int i=0;i<rowCnt;i++)
+				{
+					System.out.print(rs.getString(i+1)+" ");
+				}
+				System.out.println();
+			}
+	}
+}

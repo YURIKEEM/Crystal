@@ -1,0 +1,24 @@
+package chapter10;
+
+import java.util.ArrayList;
+public class ArrayList01 {
+
+	public static void main(String[] args) {
+		ArrayList <Prod>list = new ArrayList<Prod>();
+	    Prod prod = new Prod("p101","삼성Tv 40인치",350000);
+		
+		list.add(prod);
+		list.add(new Prod("p102","LG Caption Tv",400000));
+		list.add(new Prod("p103","LG NoteBook",1500000));
+		
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		System.out.println(list.get(2));
+		System.out.println(list.size());
+	
+		//일반 for문을 사용한 검색방법
+		//for(int i=0; i<)
+
+	}
+
+}

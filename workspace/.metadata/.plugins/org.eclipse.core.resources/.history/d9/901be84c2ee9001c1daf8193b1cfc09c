@@ -1,0 +1,40 @@
+/*
+ * 숫자 n이 입력되면 그 수가 소수인지 아닌지 판별하시오.
+
+예제입력—
+5
+
+예제출력
+5는 소수
+
+예제입력—
+6
+
+예제출력—
+6은 소수아님
+
+예제입력—
+3
+
+예제출력—
+3은 소수
+
+제한사항 : 없음
+ */
+package jackSnider;
+
+import java.util.Scanner;
+
+public class Exam07 {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("입력 :");
+		int su=sc.nextInt();
+		
+		
+
+	
+		}
+	
+}

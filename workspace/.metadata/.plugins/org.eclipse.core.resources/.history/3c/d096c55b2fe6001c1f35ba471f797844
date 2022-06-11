@@ -1,0 +1,49 @@
+package chapter10;
+
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayList01 {
+
+	public static void main(String[] args) {
+		ArrayList <Prod>list = new ArrayList<Prod>();
+	    Prod prod = new Prod("p101","삼성Tv 40인치",350000);
+		
+		list.add(prod);
+		list.add(new Prod("p102","LG Caption Tv",400000));
+		list.add(new Prod("p103","LG NoteBook",1500000));
+		/*
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		System.out.println(list.get(2));
+		System.out.println(list.size());
+	  */
+		//1.일반 for문을 사용한 검색방법
+		for(int i=0; i<list.size(); i++){
+			System.out.println(list.get(i)+"\n");
+		}
+         //2.enhanced for문을 사용한 검색
+		/*for(Prod p : list) {
+			System.out.println(p+"\n");
+		/*
+		}
+		//Iterator 사용한 검색
+		/*반복자로 특정 컬렉션 객체의 내용을 처음부터 차례대로 검색할 때 사용
+		 * 컬렉션 중 Collection 인터페이스를 구현한 객체에서 사용가능'
+		 * 사용형식
+		 * Iterator <데이터타입> 이름= 컬랙션.iterator();
+		 *  -hasNext() :가져올 다음 자료가 있는지 여부
+		 *  -next() : hasNext()가 참일때 해당 객체를 가져옴
+		 *  -remove() : next()에 의해 가져온 자료를 제거
+		 *  -전체 검색할 떄 주로 사용
+		*/
+		 
+		Iterator<Prod> iterator = list.iterator();
+	    while(iterator.hasNext()) {
+	    	Prod p = iterator.next();
+	    	System.out.println(p+"\n");
+	    }
+	}
+}

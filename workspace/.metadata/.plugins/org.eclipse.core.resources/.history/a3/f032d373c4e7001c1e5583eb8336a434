@@ -1,0 +1,23 @@
+/*
+ * String words = “Jack sNIdEr alWaYS eaTs ChIKEns”;
+
+다음 문자열에서 대문자는 소문자로, 소문자는 대문자로 바꿔서 출력하시오.
+ */
+package jackSnider;
+
+public class Exam06 {
+ 
+	public static void main(String[] args) {
+	 String words = "Jack sNIdEr alWaYS eaTs ChIKEns";
+	 char temp=' ';
+	 String answer = "";
+		for(int i=0; i<words.length();i++) {
+		
+			if(words.charAt(i)==65) {
+				
+			}
+		}
+
+	}
+
+}

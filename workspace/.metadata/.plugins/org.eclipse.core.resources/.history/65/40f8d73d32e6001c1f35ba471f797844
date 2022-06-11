@@ -1,0 +1,23 @@
+package chapter10;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ArrayList02 {
+
+	public static void main(String[] args) throws Exception{
+		List<Integer>list = new ArrayList<Integer>();
+		Scanner sc = new Scanner(System.in);
+		char ch=(char)System.in.read();
+		while(System.in.read()!='N'||System.in.read()!='n') {
+			int num= sc.nextInt();
+			list.add(num);
+			ch=(char)System.in.read();
+		}
+		
+		
+
+	}
+
+}

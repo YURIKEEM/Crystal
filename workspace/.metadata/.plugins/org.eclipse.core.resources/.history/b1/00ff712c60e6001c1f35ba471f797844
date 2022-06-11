@@ -1,0 +1,29 @@
+package chapter10;
+
+import java.util.Scanner;
+   
+public class StudentExam {
+    Scanner sc = new Scanner(System.in);
+    Student st = new Student();
+	public static void main(String[] args) {
+		
+		
+	    //메뉴 (1.입력 2.전체list출력 3.조회 4.종료)
+		System.out.println("----------------------------------------------------");
+		System.out.println("|  1.입력   |  2.전체List출력  |  3.조회  |  4.종료  |");
+		System.out.println("----------------------------------------------------");
+		//메뉴선택
+   
+        
+	}
+    public static void inputScore() {
+    	
+    }
+    
+    public static void selectAll() {
+    	
+    }
+    public static void selectOne() {
+    	
+    }
+}
